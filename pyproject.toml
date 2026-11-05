@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tool-fallback-cascade"
+version = "0.1.0"
+description = "Hierarchical fallback orchestrator executing primary tools and seamlessly falling back to secondary providers"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [
+    {name = "Ejaj Mahmud", email = "dev@ejajmahmud.com"}
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+]
+dependencies = []
+
+[project.scripts]
+tool-fallback-cascade = "tool_fallback_cascade.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["tool_fallback_cascade*"]
